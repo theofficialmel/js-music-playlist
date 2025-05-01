@@ -163,56 +163,60 @@ let songs = [
    
    ];
 
-   const playlist = document.getElementById("playlist");
+//    const playlistDivElement = document.getElementById("playlist");
 
-   const songtitle = document.createElement("h3");
-   const songartist = document.createElement("p");
-   const songduration = document.createElement("p");
-   const songfavorite = document.createElement("p");
+//    const songtitle = document.createElement("h3");
+//    const songartist = document.createElement("p");
+//    const songduration = document.createElement("p");
+//    const songfavorite = document.createElement("p");
 
-   playlistDivElement.classList.add("playlist");
-    songtitle.classList.add("song-title");
-    songartist.classList.add("song-artist");
-    songduration.classList.add("song-duration");
-    songfavorite.classList.add("song-favorite");
+//    playlistDivElement.classList.add("playlist");
+//     songtitle.classList.add("song-title");
+//     songartist.classList.add("song-artist");
+//     songduration.classList.add("song-duration");
+//     songfavorite.classList.add("song-favorite");
 
 
   
 
 
-   songtitle.innerHTML = songs.title;
-   songartist.innerHTML = songs.artist;
-    songduration.innerHTML = songs.duration;
-    songfavorite.innerHTML = songs.liked ? "❤️" : "";
-
-    playlistDivElement.appendChild(songtitleElement);
-    playlistDivElement.appendChild(songartistElement);
-    playlistDivElement.appendChild(songdurationElement);
-    playlistDivElement.appendChild(songfavoriteElement);
-    
-    for (let playlist of playlist)
-        console.log(playlist);
+//    songtitle.innerHTML = songs.title;
+//    songartist.innerHTML = songs.artist;
+    // songduration.innerHTML = songs.duration;
+   // songfavorite.innerHTML = songs.liked ? "❤️" : "";
+    // console.log(playlist);
+    // playlistDivElement.appendChild(songtitleElement);
+    // playlistDivElement.appendChild(songartistElement);
+    // playlistDivElement.appendChild(songdurationElement);
+    // playlistDivElement.appendChild(songfavoriteElement);
+    console.log("hi");
+    const playlist = document.getElementById("playlist");
+    for (let i = 0; i < songs.length; i++)
+        
     {
+        console.log(songs[i]);
         const songtitle = document.createElement("h3");
-        song.classList.add("song-title");
+        songtitle.classList.add("song-title");
+songtitle.textContent = songs[i].title;
+playlist.appendChild(songtitle);
 
-        const title = document.createElement("h3");
-        title.innerText = playlist.title;
-        song.appendChild(title);
+        // const title = document.createElement("h3");
+        // title.innerText = playlist.title;
+        // song.appendChild(title);
 
-        const artist = document.createElement("p");
-        artist.innerText = playlist.artist;
-        song.appendChild(artist);
+         const artist = document.createElement("p");
+         artist.innerText = songs[i].artist;
+        playlist.appendChild(artist);
 
-        const duration = document.createElement("p");
-        duration.innerText = playlist.duration;
-        song.appendChild(duration);
+         const duration = document.createElement("p");
+         duration.innerText = playlist.duration;
+         playlist.appendChild(duration);
 
-        const favorite = document.createElement("p");
-        favorite.innerText = playlist.liked ? "❤️" : "🤍";
-        song.appendChild(favorite);
+        // const favorite = document.createElement("p");
+        // favorite.innerText = playlist.liked ? "❤️" : "🤍";
+        // song.appendChild(favorite);
 
-        playlist.appendChild(song);
+        // playlist.appendChild(song);
     }
 
    
